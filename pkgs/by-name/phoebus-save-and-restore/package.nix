@@ -46,7 +46,8 @@ stdenv.mkDerivation {
       "services/save-and-restore" \
       "service-save-and-restore-$version.jar" \
       "phoebus-save-and-restore" \
-      "org.springframework.boot.loader.JarLauncher"
+      "org.springframework.boot.loader.JarLauncher" \
+      "-Djca.use_env=true"
 
     runHook postInstall
   '';
